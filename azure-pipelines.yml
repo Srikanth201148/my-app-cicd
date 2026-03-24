@@ -11,7 +11,7 @@ steps:
 - script: echo "Build step running"
   displayName: "Build Step"
 
-- script: mkdir C:\deploy-folder
+- script: if not exist C:\deploy-folder mkdir C:\deploy-folder
   displayName: "Create Deployment Folder"
 
 - script: echo "Hello from CD" > C:\deploy-folder\app.txt
