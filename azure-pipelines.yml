@@ -6,10 +6,13 @@ pool:
 
 steps:
 - script: echo "Code pulled successfully"
-  displayName: "Step 1"
+  displayName: "CI Step"
 
 - script: echo "Build step running"
-  displayName: "Step 2"
+  displayName: "Build Step"
 
-- script: echo "Deployment step"
-  displayName: "Step 3"
+- script: mkdir C:\deploy-folder
+  displayName: "Create Deployment Folder"
+
+- script: echo "Hello from CD" > C:\deploy-folder\app.txt
+  displayName: "Deploy Step"
