@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "Code pulled successfully"
+  displayName: "Step 1"
+
+- script: echo "Build step running"
+  displayName: "Step 2"
+
+- script: echo "Deployment step"
+  displayName: "Step 3"
