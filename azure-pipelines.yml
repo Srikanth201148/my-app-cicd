@@ -11,6 +11,12 @@ steps:
 - script: echo "Build step running"
   displayName: "Build Step"
 
+- script: echo "Running SonarQube Scan..."
+  displayName: "SonarQube Analysis"
+
+- script: echo "Checking Quality Gate..."
+  displayName: "Quality Gate"
+
 - script: if not exist C:\deploy-folder mkdir C:\deploy-folder
   displayName: "Create Deployment Folder"
 
